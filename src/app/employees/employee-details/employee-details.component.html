@@ -1,0 +1,43 @@
+<div class="container" style="margin-left: 14px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+            
+                <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                        <img [src]="employeeDetailsObject.avatar" alt="" class="img-rounded img-responsive" width="273px" style="height: 272px;" />
+                    </div>
+                    <div class="col-sm-6 col-md-7" style="font-size: 16px; margin-top: 36px;">
+                        
+                        <div class="row details">
+                            <div class="col-md-4">Employee ID </div><span>{{employeeDetailsObject.id}}</span>
+                            
+                        </div>
+                        <div class="row details">
+                            <div class="col-md-4">First Name </div><span>{{employeeDetailsObject.first_name}}</span>
+                            
+                        </div>
+                        <div class="row details" >
+                            <div class="col-md-4">Last Name </div><span>{{employeeDetailsObject.last_name}}</span>
+                            
+                        </div>
+                        <div class="row details">
+                            <div class="col-md-4">Email Address</div><span>{{employeeDetailsObject.email}}</span>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    <div class="row" style="margin-top: 30px;" >
+       <div class="col-md-2">
+        <button class="btn btn-info btn_css" routerLinkActive="active" [routerLink]="['/Employee','update',employeeDetailsObject.id]">update</button>
+       </div> 
+       <div class="col-md-2">
+        <button class="btn btn-warning btn_css " (click)="removeEmployee(employeeDetailsObject.id)">Remove</button>
+       </div> 
+        
+    </div>
+    </div>
+

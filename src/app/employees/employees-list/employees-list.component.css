@@ -1,0 +1,31 @@
+.menu_css 
+{
+    list-style-type: none;
+    display: inline;
+    
+}
+.in
+{
+    float: left;
+    padding-left: 20px;
+    
+}
+.card_customCSS
+{
+    width: 128px;
+    margin-bottom: 31px;
+}
+.customImgSize
+{
+    width: 167px;
+    height: 157px;
+
+}
+.count_css
+{
+    color: brown;
+}
+.count_lengthCSS
+{
+    color: darkblue;
+}

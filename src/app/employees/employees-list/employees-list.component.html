@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+     <p style="text-align: end;"><span class="count_css">Total of <label class="count_lengthCSS">{{this.employeeList.data.length}}</label> Employees</span></p>
+  
+    <div class="col-md-3" *ngFor="let employeee of this.employeeList.data | paginate:{itemsPerPage: 8, currentPage:p} "  >
+      <div class="card card_customCSS" rooterLinkActive="active" [routerLink]="['/employeeDetails',employeee.id]" >
+        <img [src]="employeee.avatar" class="customImgSize" alt="empty image" >
+        
+        <p><button style="width: 167px;;
+          background-color: blue; color: white;">{{employeee.first_name}} {{employeee.last_name}}</button></p>
+
+      </div>
+    </div>
+    
+    
+    
+ 
+  
+  </div>
+  
+  
+  </div>
+  <div class="row" style="margin-top: 21px;">
+    <div class="col-md-10 col-md-offset-4">
+        <pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+    </div>
+   
+  </div>
+  
+  

@@ -1,0 +1,52 @@
+<div class="container" style="margin-left: 14px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+            
+                <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                        <img [src]="imgurl" alt="" class="img-rounded img-responsive" width="273px" style="height: 272px;" />
+                    </div>
+                    <div class="col-sm-6 col-md-7" style="font-size: 14px; margin-top: 36px;">
+                        
+                        <div class="row details">
+                            <div class="col-md-4">First Name </div>
+                                <div class="col-md-7">
+                                    <input type="text" required name="first_name" [(ngModel)]="this.employeeObject.first_name" class="formcontrol_Customcss form-control ">
+                                </div>
+                         </div>
+
+                         <div class="row details">
+                            <div class="col-md-4">Last Name </div>
+                                <div class="col-md-7">
+                                    <input type="text" required name="last_name" [(ngModel)]="this.employeeObject.last_name" class=" formcontrol_Customcss form-control">
+                                </div>
+                         </div>
+
+                         <div class="row details">
+                            <div class="col-md-4">Email Address</div>
+                                <div class="col-md-7">
+                                    <input type="text" required  name="email_address" required [(ngModel)]="this.employeeObject.email" class=" formcontrol_Customcss form-control">
+                                </div>
+                         </div>
+
+                         <div class="row details">
+                            <div class="col-md-4">Upload Photo</div>
+                                <div class="col-md-7">
+                                    <input type="file" name ="imge"  (change)="onSelectFile($event)" >
+                                </div>
+                         </div>
+                        
+                         <button *ngIf="type=='add'" class="btn btn-info" (click)="addEmployee()">Add Employee</button>
+                         <button *ngIf="type=='update'" class="btn btn-info" (click)="updateEmployee(this.employeeObject)">update Employee</button>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    
+    </div>
+
+
+

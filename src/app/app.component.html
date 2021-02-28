@@ -1,0 +1,16 @@
+<div class="container" style="padding-top: 33px;">
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <ul class="menu_css">
+        <li class="in"><a>workforce</a></li>
+        <li class="in"><a routerLinkActive="active" routerLink="/employeeList" >Employees</a></li>
+        <li class="in"><a routerLinkActive="active" [routerLink]="['/Employee','add',0]" >Add Employee</a></li>
+      </ul>
+    </div>
+    <div class="panel-body">
+      <router-outlet></router-outlet>
+   </div>
+  </div>
+ 
+</div>
